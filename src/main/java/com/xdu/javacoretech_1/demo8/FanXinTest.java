@@ -56,6 +56,17 @@ import java.util.Comparator;
  所以Pair《Employee》p并不能接收
 
 
+ 泛型通配符<? extend Employee>
+ 表示任何泛型Pair类型，他的类型参数是Employee的子类
+ 例如（Pair<? extend Employee> p）
+ 注意Pair《Maneger》是Pair《？ extend Employee》的子类型
+
+
+ 通配符还可以使用super表示是超类型的限定（? super Manager）
+
+
+泛型中的反射
+
  */
 
 public class FanXinTest  {
