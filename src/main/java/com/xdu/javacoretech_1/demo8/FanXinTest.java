@@ -1,5 +1,6 @@
 package com.xdu.javacoretech_1.demo8;
 
+import java.lang.reflect.Field;
 import java.util.Comparator;
 
 /**
@@ -71,13 +72,21 @@ import java.util.Comparator;
 
 public class FanXinTest  {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException {
         Fanxin<String, String> stringStringFanxin = new Fanxin<>();
+        Class<Fanxin> name = Fanxin.class;
+        Field firsts = name.getField("first");
+        firsts.setAccessible(true);
+        Class<?> type = firsts.getType();
+        System.out.println(type);
+        //System.out.println(first.getType());
+
+        System.out.println(name);
     }
 
 }
 class Fanxin<T,U> implements Comparable {
-    private T first;
+    public          T first;
     private  U second;
     //...是可变参数的意思，实际上相当于一个数组
 
