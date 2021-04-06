@@ -23,6 +23,15 @@ import java.util.ArrayDeque;
  * 使用ArrayQueue
  * 如果需要一个链表队列，我们可以使用LinkedList（因为其实现了Queue）
  *
+ *
+ * 优先级队列
+ * 中的元素可以按照任意的顺序进行插入，但是检索时会按照有序的顺序进行检索
+ * 但是并没有对所有的元素进行排序
+ * 优先级队列采用的是一种堆的方式（heap），可以将最小或者最大元素移动到第一个位置
+ *
+ *
+ * 
+ *
  */
 public class QueueTest {
     public static void main(String[] args) {
