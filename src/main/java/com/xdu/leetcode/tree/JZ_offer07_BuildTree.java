@@ -37,7 +37,4 @@ public class JZ_offer07_BuildTree {
             root.right = build(preorder,inorder,prestart+leftsize+1,preend,index+1,inend);
             return root;
         }
-
-
-
 }
